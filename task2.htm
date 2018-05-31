@@ -1,0 +1,42 @@
+<html>
+    <body>
+            
+     
+            <label for = "num1"> Enter number of rows: </label>
+            <input id="num1" type="number">
+            <label for="num2"> Enter number of colomuns: </label>
+            <input id="num2" type="number">
+            <button id="Bt1"> Generate Table</button>
+            <div id="mytab">
+                <table border="100">
+                   
+                </table>
+            </div>
+
+            <script>
+                var a = document.getElementById("num1");
+                var b= document.getElementById("num2");
+              
+               document.getElementById("Bt1").addEventListener("click",function(){
+                  var div= document.getElementById("mytab")
+                   var table =document.createElement("table");
+
+                   for(var i=0; i<=a;i++ ){
+                      var row = document.createElement('tr');
+
+                       for(var j=i; j<=b;j++ ){
+                        var  cells = document.createElement('td');
+                        row.appendChild(cells);
+                           
+                       } table.appendChild(row);
+
+
+                   }
+                   div.appendChild(table);
+
+                   
+                    
+                })
+            </script>
+    </body>
+</html>
